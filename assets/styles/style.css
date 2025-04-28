@@ -1,0 +1,854 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-header: #fefdff;
+  --bg-problematica: #fff7ed;
+  --text-secondary: #752fad;
+  --title-secondary: #bd2ca7;
+  --decoration-1: #fde047;
+  --decoration-2: #fd76e0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 60px;
+    background-color: var(--bg-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+  }
+  
+  header img {
+    width: 80px;
+  }
+  
+  header nav ul {
+    display: flex;
+    gap: 30px;
+  }
+  
+  header nav li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-secondary);
+  }
+  
+  /* -------------------------------- */
+  /* Ocultar checkbox y burger por defecto */
+  /* -------------------------------- */
+  #menu-toggle {
+    display: none;
+  }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;  /* por encima del nav desplegable */
+  }
+  
+  .burger span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--text-secondary);
+    transition: all 0.3s;
+  }
+
+.marca-agua {
+  opacity: 0.5;
+  padding: 30px 0;
+}
+
+/* Body */
+
+body {
+  overflow-x: hidden;
+}
+
+/* Info */
+
+.introduccion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(90deg, #4ade81, #60a6f8);
+  padding: 70px;
+  margin-top: 80px;
+}
+
+.info {
+  color: white;
+  width: 40%;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.info h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: white;
+  color: white;
+}
+
+.buttons-info {
+  margin-top: 20px;
+}
+
+.btn-info-masInfo {
+  border: none;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #39a965;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn-info-recetas {
+  border: none;
+  background-color: var(--decoration-1);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #22673d;
+  cursor: pointer;
+}
+
+/* Info img */
+
+.info-img {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  border-radius: 20px;
+}
+
+.info-img img {
+  width: 90%;
+  border-radius: 20px;
+  transform: rotate(-1deg);
+  transition: transform 1s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-img img:hover {
+  transform: rotate(1deg);
+}
+
+@keyframes moverArribaAbajoCirculoAmarillo {
+  0% {
+    bottom: -10px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -10px;
+  }
+}
+
+@keyframes moverArribaAbajoCirculoRosa {
+  0% {
+    top: -40px;
+  }
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: -40px;
+  }
+}
+
+.circle-yellow {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--decoration-1);
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  animation: moverArribaAbajoCirculoAmarillo 2s ease-in-out infinite;
+}
+
+.circle-pink {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--decoration-2);
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  animation: moverArribaAbajoCirculoRosa 2s ease-in-out infinite;
+}
+
+/* Proyecto */
+
+.proyecto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 5px;
+}
+
+@keyframes subirBajar {
+  0% {
+    transform: translateY(0); /* Comienza en su posición original */
+  }
+  50% {
+    transform: translateY(-10px); /* Sube 10px */
+  }
+  100% {
+    transform: translateY(0); /* Vuelve a su posición original */
+  }
+}
+
+.icono-titulo {
+  font-size: 25px;
+  animation: subirBajar 1s ease-in-out infinite;
+}
+
+h2 {
+  background: linear-gradient(to right, #ea489b, #6466f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+
+hr {
+  border: 1px solid var(--text-secondary);
+  width: 70px;
+}
+
+.info-proyecto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 70px 70px 0 70px;
+}
+
+.resumen-proyecto {
+  width: 40%;
+}
+
+.resumen-proyecto p {
+  font-size: 18px;
+}
+
+.img-proyecto {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  border-radius: 20px;
+}
+
+.img-proyecto img {
+  width: 90%;
+  border-radius: 20px;
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.img-proyecto img:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Problematica */
+
+.problematica {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--bg-problematica);
+  padding-top: 50px;
+}
+
+.problematica h2 {
+  color: var(--text-secondary);
+  font-size: 30px;
+}
+
+.info-problematica {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 70px 70px 0 70px;
+}
+
+.img-problematica {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  border-radius: 20px;
+}
+
+.img-problematica img {
+  width: 90%;
+  border-radius: 20px;
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.img-problematica img:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.resumen-problematica {
+  width: 45%;
+  background-color: white;
+  padding: 55px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 20px rgba(252, 103, 103, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resumen-problematica h3 {
+  color: #eb5b0c;
+}
+
+.resumen-problematica p {
+  color: #7e83c7;
+}
+
+/* Objetivos */
+
+.objetivos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 5px;
+  background-color: #f0fdf4;
+  padding-bottom: 0px;
+}
+
+.cards-objetivos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 70px 70px 20px 70px;
+}
+
+.card-objetivo {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card-objetivo:hover {
+  transform: scale(1.02);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.icono-objetivo-01,
+.icono-objetivo-02,
+.icono-objetivo-03 {
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-objetivo-01 {
+  background: linear-gradient(90deg, #4ade81, #19bba3);
+}
+
+.icono-objetivo-02 {
+  background: linear-gradient(90deg, #609ff9, #636bf2);
+}
+
+.icono-objetivo-03 {
+  background: linear-gradient(90deg, #c37ff4, #e74ea3);
+}
+
+.img-objetivos {
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  height: 200px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.img-objetivos img {
+  width: 200px;
+}
+
+/* Actividades */
+
+.actividades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 70px 0 70px;
+  background-color: #eff6ff;
+}
+
+.cards-actividades {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card-actividad {
+  background-color: white;
+  border-radius: 20px;
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.card-actividad:hover {
+  transform: scale(1.02);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.img-card-actividad img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+
+.contenido-card-actividad {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Recetas */
+
+.recetas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 70px 0 70px;
+  background-color: #fefce8;
+}
+
+.cards-recetas {
+  display: flex;
+  gap: 20px;
+  padding: 70px;
+}
+
+.card-receta {
+  background-color: white;
+  border-radius: 20px;
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  width: 540px;
+  position: relative;
+}
+
+.card-receta:hover {
+  transform: scale(1.02);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cards-recetas img {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px 20px 0 0;
+}
+
+.contenido-card-receta {
+  padding: 20px 40px;
+}
+
+.contenido-card-receta h5 {
+  margin: 10px 0;
+}
+
+.facil,
+.muy-facil {
+  position: absolute;
+  padding: 5px 15px;
+  border-radius: 20px;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+
+.facil {
+  background-color: #facc15;
+  color: #854d0e;
+}
+
+.muy-facil {
+  background-color: #4ade80;
+  color: #16654f;
+}
+
+/* Tips */
+
+.tips {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 85%;
+}
+
+.cards-tips {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.card-tip {
+  background-color: #fefce8;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.card-tip:hover {
+  background-color: #fef9c3;
+}
+
+/* Evidencia */
+
+.fotografia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 70px 0 70px;
+  background-color: #ede8f2;
+}
+
+.evidencia {
+  column-count: 4;
+  column-gap: 20px;
+  margin-top: 40px;
+  padding-top: 30px;
+}
+
+.evidencia img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+  break-inside: avoid;
+}
+
+.evidencia img:hover {
+  transform: scale(1.02);
+}
+
+/* Nosotros */
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 200px 0 200px;
+  background-color: #fdf2f8;
+}
+
+.nosotros hr {
+  margin-bottom: 30px;
+}
+
+.nosotros p {
+  text-align: justify;
+}
+
+.seccion-nosotros {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-persona {
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-persona img {
+  background-color: #fdf2f8;
+  border-radius: 50%;
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  background: linear-gradient(90deg, #ea489b, #6466f1);
+  color: white;
+  padding: 70px 70px 10px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Media Query para pantallas de dispositivos móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+
+   /* 1) Esconde todo el nav */
+   header nav {
+    display: none;
+  }
+
+  /* 2) Muestra el icono burger */
+  .burger {
+    display: flex;
+  }
+
+  /* 3) Sólo cuando el checkbox está chequeado, muestra el nav */
+  #menu-toggle:checked + .burger + nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    background: var(--bg-header);
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+  }
+
+  /* Ajusta el UL dentro del nav desplegado */
+  #menu-toggle:checked + .burger + nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Separación vertical entre cada enlace */
+  header nav li {
+    margin: 10px 0;
+  }
+
+  .introduccion {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 10px;
+    gap: 70px;
+  }
+
+  .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-img {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .circle-pink {
+    right: 10px;
+  }
+
+  .info-proyecto {
+    flex-direction: column;
+  }
+
+  .resumen-proyecto {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+
+  .img-proyecto {
+    width: 110%;
+    justify-content: center;
+  }
+
+  .info-problematica {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .img-problematica {
+    width: 110%;
+    justify-content: center;
+  }
+
+  .resumen-problematica {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .actividades {
+    padding: 70px 50px 0 50px;
+  }
+
+  .cards-objetivos {
+    flex-direction: column;
+  }
+
+  .cards-actividades {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cards-recetas {
+    flex-direction: column;
+  }
+
+  .cards-tips {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-tip{
+    width: 100%;
+  }
+
+  .fotografia {
+    padding: 70px 20px 0 20px;
+  }
+
+  .nosotros {
+    width: 150%;
+  }
+
+  .nosotros p {
+    text-align: center;
+  }
+
+  .nosotros p {
+    width: 150%;
+  }
+
+  .img-persona {
+    width: 100px;
+  }
+
+  .seccion-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  footer {
+    padding: 40px 30px 10px 30px;
+    text-align: center;
+  }
+}
+
+/* Media Query para dispositivos móviles medianos (hasta 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .card-actividad {
+    width: 300px;
+  }
+
+  .tips {
+    width: 118%;
+  }
+
+  .evidencia {
+    column-count: 2;
+  }
+
+  .nosotros {
+    padding: 70px 10px 0 10px;
+    width: 100%;
+  }
+
+  .seccion-nosotros {
+    width: 125%;
+  }
+
+  footer h3 {
+    font-size: 13px;
+  }
+}
+
+/* Media Query para tablets y pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .card-receta {
+    width: 360px;
+  }
+
+  .nosotros {
+    padding: 70px 100px 0 100px;
+  }
+}
