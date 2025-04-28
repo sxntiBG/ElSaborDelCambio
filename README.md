@@ -8,15 +8,6 @@ Un proyecto colorido y animado para instructoras infantiles.
 
 Blog moderno diseñado para instructoras infantiles, con un enfoque vibrante y alegre.
 
-## 📂 Organización de Carpetas
-
-- assets/
-  - img/
-  - styles/
-    - style.css
-- index.html
-- README.md
-
 ## ⚙️ Instalación y Ejecución
 
 1.  **Clona el repositorio:**
