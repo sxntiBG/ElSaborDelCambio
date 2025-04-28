@@ -10,12 +10,12 @@ Blog moderno diseñado para instructoras infantiles, con un enfoque vibrante y a
 
 ## 📂 Organización de Carpetas
 
-├── assets/
-│   ├── img/
-│   └── styles/
-│       └── style.css
-├── index.html
-└── README.md
+- assets/
+  - img/
+  - styles/
+    - style.css
+- index.html
+- README.md
 
 ## ⚙️ Instalación y Ejecución
 
