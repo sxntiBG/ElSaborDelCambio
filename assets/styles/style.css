@@ -478,8 +478,9 @@ hr {
 
 .cards-recetas {
   display: flex;
-  gap: 20px;
-  padding: 70px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 70px 0;
 }
 
 .card-receta {
@@ -537,7 +538,7 @@ hr {
   border-radius: 20px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
   padding: 30px;
-  width: 85%;
+  width: 100%;
 }
 
 .cards-tips {
@@ -656,7 +657,7 @@ footer {
 }
 
 /* Media Query para pantallas de dispositivos móviles pequeños (hasta 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
    /* 1) Esconde todo el nav */
    header nav {
