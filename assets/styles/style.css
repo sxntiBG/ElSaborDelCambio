@@ -52,9 +52,7 @@ header {
     color: var(--text-secondary);
   }
   
-  /* -------------------------------- */
-  /* Ocultar checkbox y burger por defecto */
-  /* -------------------------------- */
+
   #menu-toggle {
     display: none;
   }
@@ -66,7 +64,7 @@ header {
     width: 28px;
     height: 22px;
     cursor: pointer;
-    z-index: 1001;  /* por encima del nav desplegable */
+    z-index: 1001; 
   }
   
   .burger span {
@@ -349,6 +347,79 @@ hr {
   color: #7e83c7;
 }
 
+/* Conceptualización */
+
+.conceptualizacion{
+  background-color: #eff6ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #eff6ff;
+  padding-top: 50px;
+}
+
+.card-conceptualizacion{
+  background-color: white;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+  margin: 50px 65px;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.container-cards-conceptualizacion{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+}
+
+.card-conceptualizacion-1,
+.card-conceptualizacion-2,
+.card-conceptualizacion-3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  width: 33%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  hover{
+    transform: scale(1.4);
+  }
+}
+
+.card-conceptualizacion-1{
+  background-color: #f0fdf4;
+  h3{
+    color: #7e22ce;
+  }
+}
+
+.card-conceptualizacion-2{
+  background-color: #f0fdf4;
+  h3{
+    color: #38803d;
+  }
+}
+
+.card-conceptualizacion-3{
+ background-color: #f0fdf4;
+ h3{
+  color: #1d4ed8;
+}
+}
+
+.logo-card{
+  background-color: #dcfce7;
+  width: 38px;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
 /* Objetivos */
 
 .objetivos {
@@ -594,6 +665,65 @@ hr {
   transform: scale(1.02);
 }
 
+/* Contexto */
+
+.contexto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 5px;
+  background-color: #eef2ff;
+  padding-bottom: 0px;
+}
+
+.card-contexto{
+  background-color: white;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+  margin: 50px 65px;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.interseccion-contexto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  hr{
+    height: 1px;
+    width: 100%;
+  }
+}
+
+.cards-info-contexto{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.card-info-contexto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  width: 33%;
+  background-color: #eef2ff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  hover{
+    transform: scale(1.4);
+  }
+}
+
 /* Nosotros */
 
 .nosotros {
@@ -756,6 +886,23 @@ footer {
     padding: 30px;
   }
 
+  .card-conceptualizacion{
+    padding: 40px;
+    margin: 50px 30px;
+  }
+
+  .container-cards-conceptualizacion{
+    flex-direction: column;
+  }
+  
+.card-conceptualizacion-1,
+.card-conceptualizacion-2,
+.card-conceptualizacion-3{
+  width: 100%;
+}
+
+
+
   .actividades {
     padding: 70px 50px 0 50px;
   }
@@ -802,6 +949,19 @@ footer {
 
   .fotografia {
     padding: 70px 20px 0 20px;
+  }
+
+  .card-contexto{
+    padding: 40px;
+    margin: 50px 30px;
+  }
+  
+  .cards-info-contexto{
+    flex-direction: column;
+  }
+  
+  .card-info-contexto{
+    width: 100%;
   }
 
   .nosotros {
